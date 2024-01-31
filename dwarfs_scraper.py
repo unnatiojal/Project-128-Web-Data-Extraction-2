@@ -10,7 +10,7 @@ soup = BeautifulSoup(page.content, "html.parser")
 dwarf_star_data = []
 
 dwarf_table = soup.find_all("table", attrs={"class", "wikitable"})
-table = dwarf_table.find_all('tr')
+table = dwarf_table[1].find_all('tr')
 
 temp_list= []
 
